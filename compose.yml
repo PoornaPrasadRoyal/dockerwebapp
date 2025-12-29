@@ -2,13 +2,13 @@
 version: "3"
 services:
  devopsdb:
-   image: poornapj/newapp:dbimage
+   image: poornapj/mynewimage:db
    ports:
      - "3306:3306"
 
  application:
-   image: poornapj/newapp:appimage
+   image: poornapj/mynewimage:appimage
    ports:
-     - "1111:8080"
+     - "9999:8080"
    depends_on:
      - "devopsdb"
